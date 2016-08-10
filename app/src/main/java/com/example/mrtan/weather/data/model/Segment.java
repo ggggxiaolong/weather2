@@ -8,7 +8,6 @@ public final class Segment {
     private String date;//时间
     private String temp;//温度
     private String hum;//湿度
-    private String pcpn;//降雨量
     private String spd;//风速
     private String sc;//风力
 
@@ -34,14 +33,6 @@ public final class Segment {
 
     public void setHum(String hum) {
         this.hum = hum;
-    }
-
-    public String getPcpn() {
-        return pcpn;
-    }
-
-    public void setPcpn(String pcpn) {
-        this.pcpn = pcpn;
     }
 
     public String getSpd() {
