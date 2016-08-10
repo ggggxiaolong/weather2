@@ -4,7 +4,8 @@ package com.example.mrtan.weather.data.model;
  * *生活指数
  */
 
-public final class Quality implements Comparable<Quality>{
+public final class Quality implements Comparable<Quality> {
+    int order;
     String title;
     String brief;
     String detail;
@@ -35,6 +36,14 @@ public final class Quality implements Comparable<Quality>{
 
     @Override
     public int compareTo(Quality o) {
-        return 0;
+        return order - o.order;
+    }
+
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
     }
 }
