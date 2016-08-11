@@ -228,7 +228,7 @@ public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
         }
         in.endArray();
         if (alarms.size() > 0) {
-            weather.setAlarm(alarms);
+            weather.setAlarms(alarms);
         }
     }
 
@@ -272,6 +272,22 @@ public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
                         }
                         in.endObject();
                         break;
+                    }
+                    case "basic":{
+                        in.beginObject();
+                        while (in.hasNext()){
+                            switch (in.nextName()){
+                                case "city":{
+                                    weather.setCityName(in.nextString());
+                                    break;
+                                }
+                                case "id":{
+                                    weather.setCityId(in.nextString());
+                                    break;
+                                }
+                            }
+                        }
+                        in.endObject();
                     }
                 }
             }
