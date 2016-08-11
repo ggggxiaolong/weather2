@@ -1,6 +1,5 @@
 package com.example.mrtan.weather.data.model;
 
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -8,17 +7,36 @@ import java.util.List;
  */
 
 public final class Weather {
+
+    private String mCityId;
+    private String mCityName;
     private List<Alarm> mAlarms;//警告
     private Now mNow;//当前
     private List<Segment> mSegments;//时段
     private List<Quality> mQualities;//建议
     private List<Daily> mDailies;//每天
 
-    public List<Alarm> getAlarm() {
+    public String getCityId() {
+        return mCityId;
+    }
+
+    public void setCityId(String cityId) {
+        mCityId = cityId;
+    }
+
+    public String getCityName() {
+        return mCityName;
+    }
+
+    public void setCityName(String cityName) {
+        mCityName = cityName;
+    }
+
+    public List<Alarm> getAlarms() {
         return mAlarms;
     }
 
-    public void setAlarm(List<Alarm> alarms) {
+    public void setAlarms(List<Alarm> alarms) {
         mAlarms = alarms;
     }
 
