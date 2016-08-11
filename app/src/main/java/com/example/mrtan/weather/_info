@@ -3,7 +3,7 @@
     --/remote 服务器数据
     --/ store 数据接口（协议）
     --/ model 与其他层交流的数据实体
-/injection  依赖注入
+/injection  依赖注入 dagger2使用指南 https://github.com/luxiaoming/dagger2Demo
     --/component
     --/module
 /ui  展示层
