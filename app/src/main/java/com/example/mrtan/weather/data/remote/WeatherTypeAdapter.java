@@ -18,7 +18,7 @@ import java.util.Collections;
  * 天气的TypeAdapter
  */
 
-public class WeatherTypeAdapter extends TypeAdapter<Weather> {
+public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
 
     @Override
     public void write(JsonWriter out, Weather value) throws IOException {
@@ -159,7 +159,7 @@ public class WeatherTypeAdapter extends TypeAdapter<Weather> {
                         if ("txt".equals(in.nextName())) {
                             now.setDesc(in.nextString());
                         } else {
-                            // TODO: 16/8/10
+                            // todo
                         }
                     }
                     in.endObject();
