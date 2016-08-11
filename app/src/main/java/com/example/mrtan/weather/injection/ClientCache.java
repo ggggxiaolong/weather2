@@ -7,5 +7,8 @@ import javax.inject.Qualifier;
 
 @Qualifier
 @Retention(RetentionPolicy.RUNTIME)
+/**
+ * 用于区分相同返回值的不同对象
+ */
 public @interface ClientCache {
 }
