@@ -1,0 +1,21 @@
+import java.lang.Integer;
+
+CREATE TABLE now (
+    cid TEXT PRIMARY KEY,
+    icon INTEGER AS Integer,
+    _desc TEXT,
+    fl TEXT,
+    _temp TEXT,
+    hum TEXT,
+    pcpm TEXT,
+    sc TEXT,
+    spd TEXT,
+    pm25 TEXT,
+    quality TEXT,
+    FOREIGN KEY(cid) REFERENCES weather(cid)
+);
+
+select_alarm_by_cid:
+SELECT *
+FROM now
+WHERE cid = ?;

@@ -1,0 +1,12 @@
+CREATE TABLE alarm (
+    cid TEXT,
+    type TEXT,
+    level TEXT,
+    detail TEXT,
+    PRIMARY KEY (cid, type),
+    FOREIGN KEY(cid) REFERENCES weather(cid)
+);
+select_alarm_by_cid:
+SELECT *
+FROM alarm
+WHERE cid = ?;

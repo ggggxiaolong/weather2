@@ -1,0 +1,17 @@
+CREATE TABLE daily(
+    cid TEXT,
+    date TEXT,
+    icon TEXT,
+    max_temp TEXT,
+    min_tremp TEXT,
+    hum TEXT,
+    sc TEXT,
+    spd TEXT,
+    PRIMARY KEY (cid, date),
+    FOREIGN KEY(cid) REFERENCES weather(cid)
+);
+
+select_daily_by_cid:
+SELECT *
+FROM daily
+WHERE cid = ?;

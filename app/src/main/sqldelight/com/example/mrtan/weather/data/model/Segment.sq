@@ -1,0 +1,15 @@
+CREATE TABLE segment (
+    cid TEXT,
+    date TEXT,
+    _temp TEXT,
+    hum TEXT,
+    spd TEXT,
+    sc TEXT,
+    PRIMARY KEY (cid, date),
+    FOREIGN KEY(cid) REFERENCES weather(cid)
+);
+
+select_segment_by_cid:
+SELECT *
+FROM segment
+WHERE cid = ?;
