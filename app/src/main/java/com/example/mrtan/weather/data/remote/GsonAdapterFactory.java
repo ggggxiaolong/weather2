@@ -10,7 +10,7 @@ public final class GsonAdapterFactory implements TypeAdapterFactory {
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
         if (Weather.class == type.getRawType()){
-            return new WeatherTypeAdapter();
+//            return new WeatherTypeAdapter();
         }
         return null;
     }

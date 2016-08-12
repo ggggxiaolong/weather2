@@ -18,8 +18,8 @@ import java.util.Collections;
  * 天气的TypeAdapter
  */
 
-public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
-
+public class WeatherTypeAdapter<T> {
+/*
     @Override
     public void write(JsonWriter out, Weather value) throws IOException {
 
@@ -74,9 +74,9 @@ public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
         }
     }
 
-    /**
+    *//**
      * 处理建议
-     */
+     *//*
     private void resolveSuggestion(JsonReader in, Weather weather) throws IOException {
         ArrayList<Quality> qs = new ArrayList<>();//小于10个,不用显示声明个数
         in.beginObject();
@@ -139,9 +139,9 @@ public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
         }
     }
 
-    /*
+    *//*
      * 处理实时天气
-     */
+     *//*
     private void resolveNow(JsonReader in, Weather weather) throws IOException {
         in.beginObject();
         Now now = weather.getNow();
@@ -198,9 +198,9 @@ public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
         in.endObject();
     }
 
-    /**
+    *//**
      * 处理警告
-     */
+     *//*
     private void resolveAlarms(JsonReader in, Weather weather) throws IOException {
         ArrayList<Alarm> alarms = new ArrayList<>();
         in.beginArray();
@@ -232,9 +232,9 @@ public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
         }
     }
 
-    /**
+    *//**
      * 处理小时天气
-     */
+     *//*
     private void resolveHourly(JsonReader in, Weather weather) throws IOException {
         ArrayList<Segment> segments = new ArrayList<>();
         in.beginArray();
@@ -300,9 +300,9 @@ public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
         }
     }
 
-    /**
+    *//**
      * 处理7日天气
-     */
+     *//*
     private void resolveDaily(JsonReader in, Weather weather) throws IOException {
         in.beginArray();
         ArrayList<Daily> dailies = new ArrayList<>();
@@ -378,9 +378,9 @@ public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
         }
     }
 
-    /**
+    *//**
      * 处理提天气质量
-     */
+     *//*
     private void resolveApi(JsonReader in, Weather weather) throws IOException {
         in.beginObject();
         if (in.hasNext() && "city".equals(in.nextName())) {
@@ -405,5 +405,5 @@ public class WeatherTypeAdapter<T> extends TypeAdapter<Weather> {
             in.endObject();
         }
         in.endObject();
-    }
+    }*/
 }

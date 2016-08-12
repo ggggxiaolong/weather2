@@ -1,12 +1,15 @@
 package com.example.mrtan.weather.data.model;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
 import java.util.List;
 
 /**
  * 天气
  */
 
-public final class Weather {
+public final class Weather implements WeatherModel{
 
     private String mCityId;
     private String mCityName;
@@ -71,4 +74,17 @@ public final class Weather {
     public void setDailies(List<Daily> dailies) {
         mDailies = dailies;
     }
+
+    @Nullable
+    @Override
+    public String cid() {
+        return mCityId;
+    }
+
+    @NonNull
+    @Override
+    public String cname() {
+        return mCityName;
+    }
+
 }
