@@ -3,6 +3,8 @@ package com.example.mrtan.weather.data.model;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import org.immutables.value.Value;
+
 import java.util.List;
 
 /**
